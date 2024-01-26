@@ -1,0 +1,498 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A3E92992B63FAE900D620A7 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 5A3E92982B63FAE900D620A7 /* RealityKitContent */; };
+		5A3E929B2B63FAE900D620A7 /* RolldiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3E929A2B63FAE900D620A7 /* RolldiceApp.swift */; };
+		5A3E929D2B63FAE900D620A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3E929C2B63FAE900D620A7 /* ContentView.swift */; };
+		5A3E929F2B63FAE900D620A7 /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3E929E2B63FAE900D620A7 /* ImmersiveView.swift */; };
+		5A3E92A12B63FAEB00D620A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A3E92A02B63FAEB00D620A7 /* Assets.xcassets */; };
+		5A3E92A42B63FAEB00D620A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A3E92A32B63FAEB00D620A7 /* Preview Assets.xcassets */; };
+		5A3E92AF2B63FAEB00D620A7 /* RolldiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3E92AE2B63FAEB00D620A7 /* RolldiceTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5A3E92AB2B63FAEB00D620A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5A3E928B2B63FAE900D620A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5A3E92922B63FAE900D620A7;
+			remoteInfo = Rolldice;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5A3E92932B63FAE900D620A7 /* Rolldice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rolldice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A3E92972B63FAE900D620A7 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
+		5A3E929A2B63FAE900D620A7 /* RolldiceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RolldiceApp.swift; sourceTree = "<group>"; };
+		5A3E929C2B63FAE900D620A7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5A3E929E2B63FAE900D620A7 /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
+		5A3E92A02B63FAEB00D620A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5A3E92A32B63FAEB00D620A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5A3E92A52B63FAEB00D620A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A3E92AA2B63FAEB00D620A7 /* RolldiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RolldiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A3E92AE2B63FAEB00D620A7 /* RolldiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RolldiceTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5A3E92902B63FAE900D620A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A3E92992B63FAE900D620A7 /* RealityKitContent in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A3E92A72B63FAEB00D620A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5A3E928A2B63FAE900D620A7 = {
+			isa = PBXGroup;
+			children = (
+				5A3E92952B63FAE900D620A7 /* Rolldice */,
+				5A3E92962B63FAE900D620A7 /* Packages */,
+				5A3E92AD2B63FAEB00D620A7 /* RolldiceTests */,
+				5A3E92942B63FAE900D620A7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5A3E92942B63FAE900D620A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5A3E92932B63FAE900D620A7 /* Rolldice.app */,
+				5A3E92AA2B63FAEB00D620A7 /* RolldiceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5A3E92952B63FAE900D620A7 /* Rolldice */ = {
+			isa = PBXGroup;
+			children = (
+				5A3E929A2B63FAE900D620A7 /* RolldiceApp.swift */,
+				5A3E929C2B63FAE900D620A7 /* ContentView.swift */,
+				5A3E929E2B63FAE900D620A7 /* ImmersiveView.swift */,
+				5A3E92A02B63FAEB00D620A7 /* Assets.xcassets */,
+				5A3E92A52B63FAEB00D620A7 /* Info.plist */,
+				5A3E92A22B63FAEB00D620A7 /* Preview Content */,
+			);
+			path = Rolldice;
+			sourceTree = "<group>";
+		};
+		5A3E92962B63FAE900D620A7 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				5A3E92972B63FAE900D620A7 /* RealityKitContent */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		5A3E92A22B63FAEB00D620A7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5A3E92A32B63FAEB00D620A7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5A3E92AD2B63FAEB00D620A7 /* RolldiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				5A3E92AE2B63FAEB00D620A7 /* RolldiceTests.swift */,
+			);
+			path = RolldiceTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5A3E92922B63FAE900D620A7 /* Rolldice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A3E92B22B63FAEB00D620A7 /* Build configuration list for PBXNativeTarget "Rolldice" */;
+			buildPhases = (
+				5A3E928F2B63FAE900D620A7 /* Sources */,
+				5A3E92902B63FAE900D620A7 /* Frameworks */,
+				5A3E92912B63FAE900D620A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rolldice;
+			packageProductDependencies = (
+				5A3E92982B63FAE900D620A7 /* RealityKitContent */,
+			);
+			productName = Rolldice;
+			productReference = 5A3E92932B63FAE900D620A7 /* Rolldice.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5A3E92A92B63FAEB00D620A7 /* RolldiceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A3E92B52B63FAEB00D620A7 /* Build configuration list for PBXNativeTarget "RolldiceTests" */;
+			buildPhases = (
+				5A3E92A62B63FAEB00D620A7 /* Sources */,
+				5A3E92A72B63FAEB00D620A7 /* Frameworks */,
+				5A3E92A82B63FAEB00D620A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A3E92AC2B63FAEB00D620A7 /* PBXTargetDependency */,
+			);
+			name = RolldiceTests;
+			productName = RolldiceTests;
+			productReference = 5A3E92AA2B63FAEB00D620A7 /* RolldiceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5A3E928B2B63FAE900D620A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					5A3E92922B63FAE900D620A7 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					5A3E92A92B63FAEB00D620A7 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 5A3E92922B63FAE900D620A7;
+					};
+				};
+			};
+			buildConfigurationList = 5A3E928E2B63FAE900D620A7 /* Build configuration list for PBXProject "Rolldice" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5A3E928A2B63FAE900D620A7;
+			productRefGroup = 5A3E92942B63FAE900D620A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5A3E92922B63FAE900D620A7 /* Rolldice */,
+				5A3E92A92B63FAEB00D620A7 /* RolldiceTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5A3E92912B63FAE900D620A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A3E92A42B63FAEB00D620A7 /* Preview Assets.xcassets in Resources */,
+				5A3E92A12B63FAEB00D620A7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A3E92A82B63FAEB00D620A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5A3E928F2B63FAE900D620A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A3E929D2B63FAE900D620A7 /* ContentView.swift in Sources */,
+				5A3E929B2B63FAE900D620A7 /* RolldiceApp.swift in Sources */,
+				5A3E929F2B63FAE900D620A7 /* ImmersiveView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A3E92A62B63FAEB00D620A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A3E92AF2B63FAEB00D620A7 /* RolldiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5A3E92AC2B63FAEB00D620A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5A3E92922B63FAE900D620A7 /* Rolldice */;
+			targetProxy = 5A3E92AB2B63FAEB00D620A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5A3E92B02B63FAEB00D620A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = xros;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Debug;
+		};
+		5A3E92B12B63FAEB00D620A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = xros;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Release;
+		};
+		5A3E92B32B63FAEB00D620A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Rolldice/Preview Content\"";
+				DEVELOPMENT_TEAM = VGKE7KP8GF;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vinamelody.xr.Rolldice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Debug;
+		};
+		5A3E92B42B63FAEB00D620A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Rolldice/Preview Content\"";
+				DEVELOPMENT_TEAM = VGKE7KP8GF;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vinamelody.xr.Rolldice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+			};
+			name = Release;
+		};
+		5A3E92B62B63FAEB00D620A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VGKE7KP8GF;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vinamelody.xr.RolldiceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rolldice.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Rolldice";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Debug;
+		};
+		5A3E92B72B63FAEB00D620A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VGKE7KP8GF;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vinamelody.xr.RolldiceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "xros xrsimulator";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rolldice.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Rolldice";
+				XROS_DEPLOYMENT_TARGET = 1.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5A3E928E2B63FAE900D620A7 /* Build configuration list for PBXProject "Rolldice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A3E92B02B63FAEB00D620A7 /* Debug */,
+				5A3E92B12B63FAEB00D620A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A3E92B22B63FAEB00D620A7 /* Build configuration list for PBXNativeTarget "Rolldice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A3E92B32B63FAEB00D620A7 /* Debug */,
+				5A3E92B42B63FAEB00D620A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A3E92B52B63FAEB00D620A7 /* Build configuration list for PBXNativeTarget "RolldiceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A3E92B62B63FAEB00D620A7 /* Debug */,
+				5A3E92B72B63FAEB00D620A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5A3E92982B63FAE900D620A7 /* RealityKitContent */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RealityKitContent;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 5A3E928B2B63FAE900D620A7 /* Project object */;
+}
