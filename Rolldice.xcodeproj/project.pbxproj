@@ -15,6 +15,7 @@
 		5A3E92A42B63FAEB00D620A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A3E92A32B63FAEB00D620A7 /* Preview Assets.xcassets */; };
 		5A3E92AF2B63FAEB00D620A7 /* RolldiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3E92AE2B63FAEB00D620A7 /* RolldiceTests.swift */; };
 		5A3E92B92B6401E100D620A7 /* dice.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 5A3E92B82B6401E100D620A7 /* dice.usdz */; };
+		5ABF83382B64BEBF006C7B84 /* studio.skybox in Resources */ = {isa = PBXBuildFile; fileRef = 5ABF83372B64BEBF006C7B84 /* studio.skybox */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		5A3E92AA2B63FAEB00D620A7 /* RolldiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RolldiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A3E92AE2B63FAEB00D620A7 /* RolldiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RolldiceTests.swift; sourceTree = "<group>"; };
 		5A3E92B82B6401E100D620A7 /* dice.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = dice.usdz; sourceTree = "<group>"; };
+		5ABF83372B64BEBF006C7B84 /* studio.skybox */ = {isa = PBXFileReference; lastKnownFileType = file.skybox; path = studio.skybox; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		5A3E92952B63FAE900D620A7 /* Rolldice */ = {
 			isa = PBXGroup;
 			children = (
+				5ABF83372B64BEBF006C7B84 /* studio.skybox */,
 				5A3E929A2B63FAE900D620A7 /* RolldiceApp.swift */,
 				5A3E929C2B63FAE900D620A7 /* ContentView.swift */,
 				5A3E929E2B63FAE900D620A7 /* ImmersiveView.swift */,
@@ -204,6 +207,7 @@
 				5A3E92A42B63FAEB00D620A7 /* Preview Assets.xcassets in Resources */,
 				5A3E92B92B6401E100D620A7 /* dice.usdz in Resources */,
 				5A3E92A12B63FAEB00D620A7 /* Assets.xcassets in Resources */,
+				5ABF83382B64BEBF006C7B84 /* studio.skybox in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
