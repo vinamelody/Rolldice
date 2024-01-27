@@ -10,6 +10,16 @@ import RealityKit
 import RealityKitContent
 
 struct ImmersiveView: View {
+
+    let diceMap = [
+        [1,6], // x-,x+
+        [4,3], // y-,y+
+        [2,5]  // z-,z+
+    ]
+    var diceData: DiceData
+
+    @State var droppedDice = false
+
     var body: some View {
         RealityView { content in
             let floor = ModelEntity(mesh: .generatePlane(width: 50, depth: 50), materials: [OcclusionMaterial()])
@@ -41,6 +51,27 @@ struct ImmersiveView: View {
 
                 dice.components[PhysicsMotionComponent.self] = .init()
                 content.add(dice)
+
+                let _ = content.subscribe(to: SceneEvents.Update.self) { event in
+                    guard droppedDice else { return }
+                    guard let diceMotion = dice.components[PhysicsMotionComponent.self] else { return }
+
+                    if simd_length(diceMotion.linearVelocity) < 0.1 && simd_length(diceMotion.angularVelocity) < 0.1 {
+                        
+                        let xDirection = dice.convert(direction: SIMD3(x: 1, y: 0, z: 0), to: nil)
+                        let yDirection = dice.convert(direction: SIMD3(x: 0, y: 1, z: 0), to: nil)
+                        let zDirection = dice.convert(direction: SIMD3(x: 0, y: 0, z: 1), to: nil)
+
+                        let greatestDirection = [
+                            0: xDirection.y,
+                            1: yDirection.y,
+                            2: zDirection.y
+                        ]
+                            .sorted(by: { abs($0.1) > abs($1.1)})[0]
+
+                        diceData.rolledNumber = diceMap[greatestDirection.key][greatestDirection.value > 0 ? 0: 1]
+                    }
+                }
             }
         }
         .gesture(dragGesture)
@@ -55,11 +86,17 @@ struct ImmersiveView: View {
             }
             .onEnded { value in
                 value.entity.components[PhysicsBodyComponent.self]?.mode = .dynamic
+
+                if !droppedDice {
+                    Timer.scheduledTimer(withTimeInterval: 1, repeats: false) { _ in
+                        droppedDice = true
+                    }
+                }
             }
     }
 }
 
 #Preview {
-    ImmersiveView()
+    ImmersiveView(diceData: DiceData())
         .previewLayout(.sizeThatFits)
 }
