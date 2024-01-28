@@ -19,6 +19,7 @@ struct ImmersiveView: View {
     var diceData: DiceData
 
     @State var droppedDice = false
+    @State var initialDragOffset: SIMD3<Float> = .zero
 
     var body: some View {
         RealityView { content in
@@ -57,7 +58,7 @@ struct ImmersiveView: View {
                     guard let diceMotion = dice.components[PhysicsMotionComponent.self] else { return }
 
                     if simd_length(diceMotion.linearVelocity) < 0.1 && simd_length(diceMotion.angularVelocity) < 0.1 {
-                        
+
                         let xDirection = dice.convert(direction: SIMD3(x: 1, y: 0, z: 0), to: nil)
                         let yDirection = dice.convert(direction: SIMD3(x: 0, y: 1, z: 0), to: nil)
                         let zDirection = dice.convert(direction: SIMD3(x: 0, y: 0, z: 1), to: nil)
@@ -81,10 +82,28 @@ struct ImmersiveView: View {
         DragGesture()
             .targetedToAnyEntity()
             .onChanged { value in
-                value.entity.position = value.convert(value.location3D, from: .local, to: value.entity.parent!)
+
+                if initialDragOffset == .zero {
+                    let startLocation = value.convert(value.startLocation3D, from: .local, to: value.entity.parent!)
+                    initialDragOffset = value.entity.position - SIMD3(startLocation.x, startLocation.y, startLocation.z)
+                }
+
+                let translation = value.translation3D
+                let adjustedY = translation.y <= 0 ? translation.y : 0 // vertical drag must be >= 0 to be above the floor
+
+                var newLocation = value.startLocation3D
+                newLocation.x += Double(translation.x)
+                newLocation.y += Double(adjustedY)
+                newLocation.z += Double(translation.z)
+                let dragLocation = value.convert(newLocation, from: .local, to: value.entity.parent!)
+
+                let newPosition = SIMD3(dragLocation.x, dragLocation.y, dragLocation.z) + initialDragOffset
+
+                value.entity.position = newPosition
                 value.entity.components[PhysicsBodyComponent.self]?.mode = .kinematic
             }
             .onEnded { value in
+                initialDragOffset = .zero
                 value.entity.components[PhysicsBodyComponent.self]?.mode = .dynamic
 
                 if !droppedDice {
