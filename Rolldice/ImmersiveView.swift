@@ -22,11 +22,19 @@ struct ImmersiveView: View {
 
     var body: some View {
         RealityView { content in
-            let floor = ModelEntity(mesh: .generatePlane(width: 50, depth: 50), materials: [OcclusionMaterial()])
+
+            let floor = ModelEntity(mesh: .generatePlane(width: 50, depth: 10), materials: [OcclusionMaterial()])
+//            let floor = ModelEntity(mesh: .generatePlane(width: 50, depth: 10), materials: [SimpleMaterial()])
             floor.generateCollisionShapes(recursive: false)
             floor.components[PhysicsBodyComponent.self] = .init(massProperties: .default, mode: .static)
 
+//            let anchor = AnchorEntity(.dwplane(.horizontal, classification: .floor, minimumBounds: [0.5, 0.5]))
+//            anchor.generateCollisionShapes(recursive: true, static: true)
+//            anchor.components[PhysicsBodyComponent.self] = .init(massProperties: .default, material: .default, mode: .static)
+//            anchor.addChild(floor)
+
             content.add(floor)
+//            content.add(anchor)
 
             if let diceModel = try? await Entity(named: "dice"),
                let dice = diceModel.children.first?.children.first,
@@ -77,12 +85,46 @@ struct ImmersiveView: View {
         .gesture(dragGesture)
     }
 
+    @State private var initialDragOffset: SIMD3<Float> = .zero
+
     var dragGesture: some Gesture {
         DragGesture()
             .targetedToAnyEntity()
             .onChanged { value in
-                value.entity.position = value.convert(value.location3D, from: .local, to: value.entity.parent!)
-                value.entity.components[PhysicsBodyComponent.self]?.mode = .kinematic
+
+                if initialDragOffset == .zero {
+
+                    let startLocation = value.convert(value.startLocation3D, from: .local, to: value.entity.parent!)
+                    initialDragOffset = value.entity.position - SIMD3<Float>(startLocation.x, startLocation.y, startLocation.z)
+                }
+
+                let translation3D = value.translation3D
+
+                print(">> \(translation3D.y)")
+
+                let theta = atan2(translation3D.y, translation3D.z)
+                let cosTheta = cos(theta)
+                let sinTheta = sin(theta)
+                let rotatedX = translation3D.x
+                let rotatedY = translation3D.y < 0 ? translation3D.y : 0
+                let rotatedZ = theta >= 0 ? translation3D.y * sinTheta + translation3D.z * cosTheta : translation3D.z * cosTheta - translation3D.y * sinTheta
+                let rotatedVector = SIMD3<Float>(Float(rotatedX), Float(rotatedY), Float(rotatedZ))
+
+                var newLocation3D = value.startLocation3D
+                newLocation3D.x += Double(rotatedVector.x)
+                newLocation3D.y += Double(rotatedVector.y)
+                newLocation3D.z += Double(rotatedVector.z)
+
+                let dragLocation = value.convert(newLocation3D, from: .local, to: value.entity.parent!)
+                var newPosition = SIMD3<Float>(dragLocation.x, dragLocation.y, dragLocation.z) + initialDragOffset
+
+//                newPosition.y = value.entity.position.y
+                value.entity.position = newPosition
+
+//                let x = value.convert(value.location3D, from: .local, to: value.entity.parent!)
+//                print(">> \(x)")
+//                value.entity.position = x
+//                value.entity.components[PhysicsBodyComponent.self]?.mode = .kinematic
             }
             .onEnded { value in
                 value.entity.components[PhysicsBodyComponent.self]?.mode = .dynamic
